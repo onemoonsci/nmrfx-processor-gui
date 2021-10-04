@@ -518,6 +518,11 @@ public class ScannerController implements Initializable {
         return values;
     }
 
+    public void addColumnData(String newColumnName, List<Double> values) {
+        setItems(newColumnName, values);
+        scanTable.addTableColumn(newColumnName, "D");
+    }
+
     public void setItems(String columnName, List<Double> values) {
         ObservableList<FileTableItem> items = scanTable.getItems();
         Map<Integer, FileTableItem> map = new HashMap<>();
