@@ -836,6 +836,10 @@ public class FXMLController implements FractionPaneChild, Initializable, PeakNav
             System.out.println("Coudn't make controller");
         }
     }
+    
+    public ScannerController getScannerController() {
+        return scannerController.get();
+    }
 
     @FXML
     public void viewDatasetInNvJAction(ActionEvent event) {
